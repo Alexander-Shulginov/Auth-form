@@ -1,0 +1,22 @@
+$main-font: 'Roboto';
+
+$color-text: #575f6b;
+$bg-color: linear-gradient(90deg, #f2f3f6 0%, #e5e6ec 100%);
+
+$fz-base: 16px;
+$fz-medium: 20px;
+$fz-large: 28px;
+
+$line-height-base: 1.25;
+
+$radius-small: 4px;
+$radius-base: 20px;
+$radius-large: 38px;
+
+$shadow-base: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+$shadow-second: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+// inner
+// $shadow-square: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
+
+//outer
+$shadow-square: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;

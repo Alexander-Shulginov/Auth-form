@@ -1,0 +1,52 @@
+.submit {
+    position: relative;
+
+    @media (any-hover: hover) {
+        &:hover .submit__animation {
+            animation: waves 0.8s linear;
+        }
+    }
+
+    &__btn {
+        box-shadow: $shadow-base;
+        border: none;
+        background-color: transparent;
+        padding: 18px;
+        outline: none;
+        width: 355px;
+        border-radius: $radius-large;
+        color: $color-text;
+        line-height: $line-height-base;
+        font-size: $fz-large;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+        transition: box-shadow 0.4s ease-in-out;
+    }
+
+    &__animation {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $radius-large;
+        filter: blur(1px);
+        box-shadow: $shadow-base;
+    }
+}
+
+@keyframes waves {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.15);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,117 @@
+.input {
+    position: relative;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .input__tip::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__field {
+        box-shadow: $shadow-base;
+        border: none;
+        background-color: transparent;
+        padding: 18px;
+        outline: none;
+        width: 355px;
+
+        color: $color-text;
+        line-height: $line-height-base;
+        font-size: $fz-base;
+
+        transition: box-shadow 0.4s ease-in-out;
+        position: relative;
+
+        &:focus-visible {
+            + .input__tip::after {
+                width: 100%;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+            }
+        }
+    }
+
+    &__tip {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        opacity: 0.9;
+        color: $color-text;
+
+        transition: transform 0.2s ease-in-out;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: $color-text;
+            opacity: 0.9;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+
+            transition: width 0.5s ease-in-out;
+        }
+    }
+
+    &__tip--hidden {
+        transform: translateY(-50%) scale(0);
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) scale(0);
+        right: 16px;
+
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        box-shadow: $shadow-square;
+        transition: transform .5s  ease-in-out;
+    }
+
+    &__btn--active {
+        .input__mask--white {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        .input__mask--black {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    &__btn--visible {
+        visibility: visible;
+        opacity: 1;
+
+        transform: translateY(-50%) scale(1);
+    }
+
+    &__mask {
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &__mask--black {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
