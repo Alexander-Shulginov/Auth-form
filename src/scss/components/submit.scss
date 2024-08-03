@@ -1,5 +1,6 @@
 .submit {
     position: relative;
+        width: 100%;
 
     @media (any-hover: hover) {
         &:hover .submit__animation {
@@ -11,9 +12,9 @@
         box-shadow: $shadow-base;
         border: none;
         background-color: transparent;
-        padding: 18px;
+        padding: 14px;
+        width: 100%;
         outline: none;
-        width: 355px;
         border-radius: $radius-large;
         color: $color-text;
         line-height: $line-height-base;

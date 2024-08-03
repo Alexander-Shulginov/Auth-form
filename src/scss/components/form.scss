@@ -1,9 +1,111 @@
 .form {
+    border-radius: $radius-base;
+    box-shadow: $shadow-second;
+    padding: 28px;
+    max-width: 450px;
+    width: 100%;
+    overflow: hidden;
+
+    &__control {
+        margin-bottom: 28px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        color: $color-text;
+        font-size: $fz-medium;
+        font-weight: 700;
+
+        box-shadow: $shadow-base;
+        padding: 6px;
+    }
+
+    &__line {
+        width: 100%;
+        height: 1px;
+        background-color: $color-text;
+
+        margin-bottom: 28px;
+    }
+
+    &__nav {
+        flex-grow: 2;
+        text-align: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        padding: 12px 0;
+    }
+
+    &__text {
+        color: transparent;
+        background-image: linear-gradient(90deg, $color-text 50%, $color-accent 50%);
+        background-size: 200% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        transition: background-position 0.2s linear;
+        transition-delay: 0.2s;
+    }
+
+    &__sign-up {
+        .form__text {
+            background-position: 200%;
+        }
+    }
+
+    &__sign-in {
+        .form__text {
+            background-position: 0%;
+        }
+    }
+
+    &__nav--active {
+        .form__text {
+            background-position: 100%;
+        }
+    }
+
+    &__frame {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: $radius-small;
+        box-shadow: inset 3px 3px 6px #bcbcbc, inset -3px -3px 6px #ffffff;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &__frame--transform {
+        transform: translateX(100%);
+    }
+
     &__inputs {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 22px;
+
+        margin-bottom: 24px;
     }
 
+    &__checkbox {
+        margin-bottom: 24px;
+    }
+
+    &__tab-in {
+        display: none;
+    }
+
+    &__tab-up {
+        display: none;
+    }
+
+    &__tab--active {
+        display: block;
+    }
 }

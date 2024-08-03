@@ -6,39 +6,86 @@
         <title>Welcom</title>
     </head>
     <body class="wrapper">
-        <div class="content">
-            <form class="form">
-                <div class="form__inputs">
-                    <div class="input">
-                        <input class="input__field" type="text" name="user" id="user-name" autocomplete="off" />
-                        <div class="input__tip">Name</div>
+        <div class="form">
+            <div class="form__tabs">
+                <div class="form__control">
+                    <div class="form__nav form__nav--active form__sign-in">
+                        <span class="form__text">Sign in</span>
                     </div>
-                    <div class="input" tabindex="1">
-                        <input class="input__field" data-input-password type="password" name="password" id="user-password" autocomplete="off" />
-                        <div class="input__tip">Password</div>
+                    <div class="form__nav form__sign-up">
+                        <span class="form__text">Sign up</span>
+                    </div>
+                    <div class="form__frame"></div>
+                </div>
 
-                        <!-- <div class="input__btn">
-                            <img class="input__mask input__mask--white" src="./assets/icons/mask-white.svg" alt="Mask" />
-                            <img class="input__mask input__mask--black" src="./assets/icons/mask-black.svg" alt="Mask" />
-                        </div> -->
-                    </div>
-                    <div class="checkbox">
-                        <div class="checkbox__wrap">
-                            <input class="checkbox__field" type="checkbox" name="user-remember" id="user-remember" />
-                            <div class="checkbox__icon">
-                                <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="svg-elem-1"></path>
-                                </svg>
-                            </div>
+                <div class="form__line"></div>
+
+                <form class="form__tab-in form__tab--active">
+                    <div class="form__inputs">
+                        <div class="input">
+                            <input class="input__field" type="email" name="mail" id="user-in-mail" autocomplete="off" gsap-anim-in />
+                            <div class="input__tip">Mail</div>
                         </div>
-                        <label class="checkbox__text" for="user-remember">Remember me</label>
+
+                        <div class="input">
+                            <input class="input__field" data-input-password type="password" name="password" id="user-in-password" autocomplete="off" gsap-anim-in />
+                            <div class="input__tip">Password</div>
+
+                            <!-- <div class="input__btn">
+                                <img class="input__mask input__mask--white" src="./assets/icons/mask-white.svg" alt="Mask" />
+                                <img class="input__mask input__mask--black" src="./assets/icons/mask-black.svg" alt="Mask" />
+                            </div> -->
+                        </div>
                     </div>
-                    <div class="submit">
+
+                    <div class="form__checkbox">
+                        <div class="checkbox" gsap-anim-in>
+                            <div class="checkbox__wrap">
+                                <input class="checkbox__field" type="checkbox" name="user-remember" id="user-in-remember" />
+                                <div class="checkbox__icon">
+                                    <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <label class="checkbox__text" for="user-in-remember">Remember me</label>
+                        </div>
+                    </div>
+
+                    <div class="submit" gsap-anim-in>
                         <button class="submit__btn" type="submit">Sign in</button>
                         <div class="submit__animation"></div>
                     </div>
-                </div>
-            </form>
+                </form>
+
+                <form class="form__tab-up">
+                    <div class="form__inputs">
+                        <div class="input" gsap-anim-up>
+                            <input class="input__field" type="email" name="user" id="user-up-name" autocomplete="off" />
+                            <div class="input__tip">Name</div>
+                        </div>
+                        <div class="input" gsap-anim-up>
+                            <input class="input__field" type="email" name="user" id="user-up-mail" autocomplete="off" />
+                            <div class="input__tip">Mail</div>
+                        </div>
+
+                        <div class="input" gsap-anim-up>
+                            <input class="input__field" data-input-password type="password" name="password" id="user-up-password" autocomplete="off" />
+                            <div class="input__tip">Password</div>
+
+                            <!-- <div class="input__btn">
+                                <img class="input__mask input__mask--white" src="./assets/icons/mask-white.svg" alt="Mask" />
+                                <img class="input__mask input__mask--black" src="./assets/icons/mask-black.svg" alt="Mask" />
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="submit" gsap-anim-up>
+                        <button class="submit__btn" type="submit">Sign up</button>
+                        <div class="submit__animation"></div>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>

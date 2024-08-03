@@ -1,22 +1,29 @@
+// Font-family
 $main-font: 'Roboto';
 
+// Color
 $color-text: #575f6b;
+// $color-accent: rgb(0, 110, 255);
+$color-accent: #44c4ff;
 $bg-color: linear-gradient(90deg, #f2f3f6 0%, #e5e6ec 100%);
 
+// Font-size
 $fz-base: 16px;
 $fz-medium: 20px;
 $fz-large: 28px;
 
+// Line-height
 $line-height-base: 1.25;
 
+// Border-radius
 $radius-small: 4px;
 $radius-base: 20px;
 $radius-large: 38px;
 
+// Shadow
 $shadow-base: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 $shadow-second: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
-// inner
-// $shadow-square: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
-
-//outer
 $shadow-square: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
+
+// Offset
+$offset-base: 18px;

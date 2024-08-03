@@ -1,5 +1,7 @@
 .input {
     position: relative;
+    width: 100%;
+    display: flex;
 
     @media (any-hover: hover) {
         &:hover {
@@ -10,12 +12,14 @@
     }
 
     &__field {
+        flex-grow: 2;
         box-shadow: $shadow-base;
         border: none;
         background-color: transparent;
-        padding: 18px;
+        padding: $offset-base;
         outline: none;
-        width: 355px;
+
+        // width: 100%;
 
         color: $color-text;
         line-height: $line-height-base;
@@ -41,7 +45,7 @@
         pointer-events: none;
         position: absolute;
         top: 50%;
-        left: 16px;
+        left: 18px;
         transform: translateY(-50%);
         opacity: 0.9;
         color: $color-text;
@@ -76,7 +80,7 @@
         height: 32px;
         border-radius: 4px;
         box-shadow: $shadow-square;
-        transition: transform .5s  ease-in-out;
+        transition: transform 0.5s ease-in-out;
     }
 
     &__btn--active {
