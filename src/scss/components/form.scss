@@ -108,4 +108,22 @@
     &__tab--active {
         display: block;
     }
+
+    &__or {
+        text-align: center;
+        font-size: $fz-medium;
+        color: $color-text;
+        text-transform: uppercase;
+
+        margin-bottom: 24px;
+    }
+
+    &__services {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+
+        margin-bottom: 24px;
+    }
 }

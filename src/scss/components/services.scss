@@ -1,0 +1,16 @@
+.service {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    box-shadow: $shadow-base;
+    cursor: pointer;
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        width: 30px;
+    }
+}
