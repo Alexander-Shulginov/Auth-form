@@ -54,6 +54,7 @@
         .form__text {
             background-position: 200%;
         }
+
     }
 
     &__sign-in {
@@ -103,6 +104,14 @@
 
     &__tab-up {
         display: none;
+
+        .form__inputs {
+            margin-bottom: 52px;
+        }
+
+        .form__checkbox {
+            margin-bottom: 52px;
+        }
     }
 
     &__tab--active {

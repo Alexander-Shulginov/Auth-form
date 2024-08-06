@@ -8,7 +8,6 @@ export default function tabsInit() {
     const cssNavActive: string = 'form__nav--active';
     const cssTabActive: string = 'form__tab--active';
     const cssFrameTransform: string = 'form__frame--transform';
-    // const cssTab
 
     if (!signIn && !signUp) return;
 
@@ -20,7 +19,7 @@ export default function tabsInit() {
 
         tabIn.classList.add(cssTabActive);
         tabUp.classList.remove(cssTabActive);
-        testUp();
+        animationSignIn();
     });
 
     signUp.addEventListener('click', (): void => {
@@ -31,39 +30,24 @@ export default function tabsInit() {
 
         tabIn.classList.remove(cssTabActive);
         tabUp.classList.add(cssTabActive);
-        testIn();
+        animationSignUp();
     });
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    console.log(1);
-                }
-            });
-        },
-        { threshold: 0 }
-    );
-
-    observer.observe(document.querySelector('.form__tab--active'));
-
-    function testUp() {
+    function animationSignIn() {
         const itemsIn = gsap.utils.toArray('[gsap-anim-in]');
         gsap.from(itemsIn, {
-            x: 50,
             opacity: 0,
-            stagger: 0.05,
-            duration: 0.25,
+            stagger: 0.12,
+            duration: 0.55,
         });
     }
 
-    function testIn() {
+    function animationSignUp() {
         const itemsUp = gsap.utils.toArray('[gsap-anim-up]');
         gsap.from(itemsUp, {
-            x: -50,
             opacity: 0,
-            stagger: 0.05,
-            duration: 0.25,
+            stagger: 0.12,
+            duration: 0.55,
         });
     }
 }

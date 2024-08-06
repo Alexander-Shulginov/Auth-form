@@ -1,15 +1,31 @@
 .service {
-    width: 46px;
-    height: 46px;
+    border: none;
     border-radius: 50%;
-    box-shadow: $shadow-base;
-    cursor: pointer;
-    padding: 8px;
+    transition: 0.2s ease-in-out;
+    background: transparent;
+    &:active {
+        box-shadow: $shadow-second;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &__elem {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        box-shadow: $shadow-base;
+        cursor: pointer;
+        padding: 8px;
 
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (any-hover: hover) {
+            &:hover .wave--animation {
+                animation: wavesIcon 0.8s linear;
+            }
+        }
+    }
     &__icon {
         width: 30px;
     }

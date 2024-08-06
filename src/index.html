@@ -38,18 +38,27 @@
                         </div>
                     </div>
 
-                    <div class="form__or">Or</div>
+                    <div class="form__or" gsap-anim-in>Or</div>
 
                     <div class="form__services">
-                        <div class="service">
-                            <img class="service__icon" src="./assets/icons/google.svg" alt="Google logo" />
-                        </div>
-                        <div class="service">
-                            <img class="service__icon" src="./assets/icons/apple.svg" alt="Apple logo" />
-                        </div>
-                        <div class="service">
-                            <img class="service__icon" src="./assets/icons/github.svg" alt="Github logo" />
-                        </div>
+                        <button class="service" type="button">
+                            <div class="service__elem" gsap-anim-in>
+                                <img class="service__icon" src="./assets/icons/google.svg" alt="Google logo" />
+                                <div class="wave--animation"></div>
+                            </div>
+                        </button>
+                        <button class="service" type="button">
+                            <div class="service__elem" gsap-anim-in>
+                                <img class="service__icon" src="./assets/icons/apple.svg" alt="Apple logo" />
+                                <div class="wave--animation"></div>
+                            </div>
+                        </button>
+                        <button class="service" type="button">
+                            <div class="service__elem" gsap-anim-in>
+                                <img class="service__icon" src="./assets/icons/github.svg" alt="Github logo" />
+                                <div class="wave--animation"></div>
+                            </div>
+                        </button>
                     </div>
 
                     <div class="form__checkbox">
@@ -68,7 +77,7 @@
 
                     <div class="submit" gsap-anim-in>
                         <button class="submit__btn" type="submit">Sign in</button>
-                        <div class="submit__animation"></div>
+                        <div class="wave--animation"></div>
                     </div>
                 </form>
 
@@ -94,9 +103,24 @@
                         </div>
                     </div>
 
+                    <div class="form__checkbox">
+                        <div class="checkbox" gsap-anim-up>
+                            <div class="checkbox__wrap">
+                                <input class="checkbox__field" type="checkbox" name="user-remember" id="user-up-remember" />
+                                <div class="checkbox__icon">
+                                    <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <label class="checkbox__text" for="user-up-remember">Remember me</label>
+                        </div>
+                    </div>
+
+
                     <div class="submit" gsap-anim-up>
                         <button class="submit__btn" type="submit">Sign up</button>
-                        <div class="submit__animation"></div>
+                        <div class="wave--animation"></div>
                     </div>
                 </form>
             </div>
