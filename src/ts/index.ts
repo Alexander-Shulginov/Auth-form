@@ -1,9 +1,11 @@
 import '../scss/style.scss';
 
-import tabsInit from './ui/tabs';
+import initTabs from './ui/initTabs';
+import { animationSignIn } from './ui/gsapAnimation';
 import togglePlaceholder from './ui/TogglePlaceholder';
 import togglePasswordVisibility from './ui/TogglePasswordVisibility';
 
-tabsInit();
+initTabs();
 togglePlaceholder();
 // togglePasswordVisibility();
+document.addEventListener('DOMContentLoaded', animationSignIn);
