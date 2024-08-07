@@ -1,5 +1,3 @@
-import { animationSignIn, animationSignUp } from './gsapAnimation';
-
 export default function initTabs(): void {
     const signIn = document.querySelector('.form__sign-in') as HTMLElement | null;
     const signUp = document.querySelector('.form__sign-up') as HTMLElement | null;
@@ -21,8 +19,6 @@ export default function initTabs(): void {
 
         tabIn.classList.toggle(cssTabActive, isSignInActive);
         tabUp.classList.toggle(cssTabActive, !isSignInActive);
-
-        isSignInActive ? animationSignIn() : animationSignUp();
     }
 
     signIn.addEventListener('click', () => toggleTabs(true));

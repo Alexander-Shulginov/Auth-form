@@ -9,6 +9,25 @@
     box-shadow: $shadow-base;
 }
 
+[animation-in],
+[animation-up] {
+    animation: visAnim 0.5s linear;
+}
+
+@keyframes waves {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.15);
+        opacity: 0;
+    }
+}
+
 @keyframes wavesIcon {
     0% {
         transform: scale(1);
@@ -23,16 +42,13 @@
     }
 }
 
-@keyframes waves {
+
+@keyframes visAnim {
     0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1.15);
         opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
