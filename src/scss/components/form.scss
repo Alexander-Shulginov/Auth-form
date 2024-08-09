@@ -16,13 +16,14 @@
         font-size: $fz-medium;
         font-weight: 700;
 
+        border-radius: $radius-field;
         box-shadow: $shadow-base;
         padding: 6px;
     }
 
     &__line {
         width: 100%;
-        height: 1px;
+        height: 2px;
         background-color: $color-text;
 
         margin-bottom: 28px;
@@ -37,6 +38,14 @@
         outline: none;
 
         padding: 12px 0;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .form__text::after {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     &__text {
@@ -48,13 +57,26 @@
 
         transition: background-position 0.2s linear;
         transition-delay: 0.2s;
+
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 0;
+            background-color: $color-text;
+            transition: width 0.5s ease-in-out;
+        }
     }
 
     &__sign-up {
         .form__text {
             background-position: 200%;
         }
-
     }
 
     &__sign-in {
@@ -66,6 +88,10 @@
     &__nav--active {
         .form__text {
             background-position: 100%;
+        }
+
+        .form__text::after {
+            content: none;
         }
     }
 

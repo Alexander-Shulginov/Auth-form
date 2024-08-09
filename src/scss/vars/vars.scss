@@ -3,9 +3,10 @@ $main-font: 'Roboto';
 
 // Color
 $color-text: #575f6b;
-// $color-accent: rgb(0, 110, 255);
-$color-accent: #44c4ff;
+// $color-accent: #44c4ff;
+$color-accent: #3392f5;
 $bg-color: linear-gradient(90deg, #f2f3f6 0%, #e5e6ec 100%);
+// $bg-color: hsl(223, 90%, 95%);
 
 // Font-size
 $fz-base: 16px;
@@ -17,6 +18,7 @@ $line-height-base: 1.25;
 
 // Border-radius
 $radius-small: 4px;
+$radius-field: 6px;
 $radius-base: 20px;
 $radius-large: 38px;
 

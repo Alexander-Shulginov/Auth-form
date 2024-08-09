@@ -11,7 +11,7 @@
 
 [animation-in],
 [animation-up] {
-    animation: visAnim 0.5s linear;
+    animation: visAnim 0.5s ease-in-out;
 }
 
 @keyframes waves {
@@ -41,7 +41,6 @@
         opacity: 0;
     }
 }
-
 
 @keyframes visAnim {
     0% {
