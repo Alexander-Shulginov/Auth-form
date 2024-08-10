@@ -1,10 +1,20 @@
 .submit {
     position: relative;
     width: 100%;
+    border-radius: $radius-large;
+    transition: 0.4s ease-in-out;
 
-    @media (any-hover: hover) {
-        &:hover .wave--animation {
-            animation: waves 0.8s linear;
+    // @media (any-hover: hover) {
+    //     &:hover .wave--animation {
+    //         animation: waves 0.8s linear forwards;
+    //     }
+    // }
+
+    &:active {
+        box-shadow: inset 3px 3px 7px #bebebe, inset -3px -3px 8px #ffffff;
+
+        .submit__text {
+            transform: scale(0.9);
         }
     }
 
@@ -23,10 +33,39 @@
         cursor: pointer;
         position: relative;
         z-index: 10;
-        transition: box-shadow 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
 
-        &:active {
-            box-shadow: $shadow-second;
+        &:focus-visible {
+            .submit__text::after {
+                width: 100%;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                .submit__text::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        position: relative;
+        transition: transform 0.4s ease-in-out;
+
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 0;
+            background-color: $color-text;
+            transition: width 0.5s ease-in-out;
         }
     }
 }
