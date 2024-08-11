@@ -1,20 +1,13 @@
-import mailValidation from './validation/mailValid';
-import nameValid from './validation/nameValid';
-import passwordValidation from './validation/passwordValid';
+import { signInData, signInForm, signUpForm } from './types';
 
-export interface signInData {
-    [key: string]: string;
-}
-
-export const enum formElem {
-    mail = 'user-in-mail',
-    password = 'user-in-password',
-}
+import mailValidation from './validation/mail';
+import nameValid from './validation/name';
+import passwordValidation from './validation/password';
 
 export default function getData(): void {
-    const formSignIn = document.getElementById('form-sign-in') as HTMLFormElement;
+    const formSignIn = document.getElementById(signInForm.form) as HTMLFormElement;
 
-    if (!formSignIn) throw new Error('#form-sign-in not found');
+    if (!formSignIn) throw new Error(`#${signInForm.form} not found`);
 
     let formData: signInData;
 
@@ -26,9 +19,9 @@ export default function getData(): void {
     const submitHandler = (event: SubmitEvent): void => {
         event.preventDefault();
         formData = getFormData(event.target as HTMLFormElement);
-        mailValidation(formElem.mail);
-        passwordValidation(formElem.password);
-        nameValid();
+        mailValidation(signInForm.mail);
+        passwordValidation(signInForm.password);
+        nameValid(signUpForm.name);
     };
 
     formSignIn.addEventListener('submit', submitHandler);

@@ -1,4 +1,6 @@
-export default function mailValidation(id: string): boolean {
+import { signInForm } from '../types';
+
+export default function mailValidation(id: signInForm.mail): boolean {
     const mailInput = document.getElementById(`${id}`) as HTMLInputElement;
 
     if (!mailInput) throw new Error(`#${id} not found`);

@@ -1,5 +1,4 @@
-import { signInData } from '../getData';
-import mailValidation from './mailValid';
+import { signInData } from '../types';
 
 export const inputIsEmpty = (data: string): boolean => {
     return data.length === 0;
