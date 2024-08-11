@@ -1,7 +1,14 @@
-import { emailValidation } from './dataValidation';
+import mailValidation from './validation/mailValid';
+import nameValid from './validation/nameValid';
+import passwordValidation from './validation/passwordValid';
 
 export interface signInData {
     [key: string]: string;
+}
+
+export const enum formElem {
+    mail = 'user-in-mail',
+    password = 'user-in-password',
 }
 
 export default function getData(): void {
@@ -19,7 +26,9 @@ export default function getData(): void {
     const submitHandler = (event: SubmitEvent): void => {
         event.preventDefault();
         formData = getFormData(event.target as HTMLFormElement);
-        emailValidation(formData);
+        mailValidation(formElem.mail);
+        passwordValidation(formElem.password);
+        nameValid();
     };
 
     formSignIn.addEventListener('submit', submitHandler);
