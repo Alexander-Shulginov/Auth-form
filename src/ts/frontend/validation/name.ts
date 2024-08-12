@@ -1,4 +1,4 @@
-import { signUpForm } from '../types';
+import { signUpForm } from '@/frontend/types';
 
 export default function nameValid(id: signUpForm.name): boolean {
     const inputElem = document.getElementById(`${id}`) as HTMLInputElement;

@@ -3,6 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/icons/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/icons/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
         <title>Welcome</title>
     </head>
     <body class="wrapper">
@@ -21,8 +28,14 @@
                 <form class="form__tab-in form__tab--active" id="form-sign-in" novalidate>
                     <div class="form__inputs">
                         <div class="input" animation-in>
-                            <input class="input__field" type="email" name="mail" id="user-in-mail" autocomplete="off"  />
+                            <input class="input__field" type="email" name="mail" id="user-in-mail" autocomplete="off" />
                             <div class="input__tip">Mail</div>
+                            <div class="input__error">
+                                <div class="error">
+                                    <img class="error__icon" src="./assets/icons/sign.svg" alt="Alert" />
+                                    <p class="error__text">Input is empty</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="input" animation-in>

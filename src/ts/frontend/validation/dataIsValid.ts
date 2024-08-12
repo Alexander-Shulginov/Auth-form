@@ -1,9 +1,8 @@
-import { signInData } from '../types';
+import { signInData, signInForm } from '../types';
+import mailIsValid from './mail';
 
-export const inputIsEmpty = (data: string): boolean => {
-    return data.length === 0;
-};
 
-export const dataIsValid = (data: signInData): boolean => {
+export const dataIsValid = (): boolean => {
+    mailIsValid(signInForm.mail);
     return true;
 };

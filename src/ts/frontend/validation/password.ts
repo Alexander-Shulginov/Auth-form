@@ -1,4 +1,4 @@
-import { signInForm } from '../types';
+import { signInForm } from '@/frontend/types';
 
 export default function passwordValidation(id: signInForm.password) {
     const mailInput = document.getElementById(`${id}`) as HTMLInputElement;

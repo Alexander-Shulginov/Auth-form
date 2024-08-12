@@ -120,4 +120,12 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0);
     }
+
+    &__error {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
 }

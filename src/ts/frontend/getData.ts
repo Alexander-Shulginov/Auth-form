@@ -1,6 +1,6 @@
 import { signInData, signInForm, signUpForm } from './types';
+import { dataIsValid } from './validation/dataIsValid';
 
-import mailValidation from './validation/mail';
 import nameValid from './validation/name';
 import passwordValidation from './validation/password';
 
@@ -19,7 +19,7 @@ export default function getData(): void {
     const submitHandler = (event: SubmitEvent): void => {
         event.preventDefault();
         formData = getFormData(event.target as HTMLFormElement);
-        mailValidation(signInForm.mail);
+        dataIsValid();
         passwordValidation(signInForm.password);
         nameValid(signUpForm.name);
     };
