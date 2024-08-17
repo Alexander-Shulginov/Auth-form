@@ -19,6 +19,7 @@ export default function getData(): void {
     const submitHandler = (event: SubmitEvent): void => {
         event.preventDefault();
         formData = getFormData(event.target as HTMLFormElement);
+
         dataIsValid();
         passwordValidation(signInForm.password);
         nameValid(signUpForm.name);

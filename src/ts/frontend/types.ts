@@ -3,14 +3,14 @@ export interface signInData {
 }
 
 export const enum signInForm {
-    form = 'form-sign-in',
-    mail = 'user-in-mail',
-    password = 'user-in-password',
+    form = 'sign-in-form',
+    mail = 'sign-in-mail',
+    password = 'sign-in-password',
 }
 
 export const enum signUpForm {
-    form = 'form-sign-up',
-    name = 'user-up-name',
-    mail = 'user-up-mail',
-    password = 'user-up-password',
+    form = 'sign-up-form',
+    name = 'sign-up-name',
+    mail = 'sign-up-mail',
+    password = 'sign-up-password',
 }
