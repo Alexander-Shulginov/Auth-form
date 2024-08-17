@@ -3,7 +3,7 @@ export default function togglePlaceholder(): void {
     const tips: NodeListOf<HTMLElement> = document.querySelectorAll('.input__tip');
     const cssTipsHidden: string = 'input__tip--hidden';
 
-    function inputIsEmpty(input: HTMLInputElement): boolean {
+    function inputIsNotEmpty(input: HTMLInputElement): boolean {
         return input.value.length === 0;
     }
 
@@ -17,7 +17,7 @@ export default function togglePlaceholder(): void {
 
     inputs.forEach((input: HTMLInputElement, index: number) => {
         input.addEventListener('input', () => {
-            inputIsEmpty(input) ? showTips(index) : hideTips(index);
+            inputIsNotEmpty(input) ? showTips(index) : hideTips(index);
         });
     });
 }

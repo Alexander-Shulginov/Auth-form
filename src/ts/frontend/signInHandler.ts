@@ -3,6 +3,7 @@ import { dataIsValid } from './validation/dataIsValid';
 
 import nameValid from './validation/name';
 import passwordValidation from './validation/password';
+import mailIsValid from './validation/mailValidation';
 
 export default function getData(): void {
     const formSignIn = document.getElementById(signInForm.form) as HTMLFormElement;
@@ -19,6 +20,8 @@ export default function getData(): void {
     const submitHandler = (event: SubmitEvent): void => {
         event.preventDefault();
         formData = getFormData(event.target as HTMLFormElement);
+
+        mailIsValid();
 
         dataIsValid();
         passwordValidation(signInForm.password);

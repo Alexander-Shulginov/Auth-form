@@ -4,7 +4,7 @@ export default function togglePasswordVisibility() {
     const cssBtnIsActive: string = 'input__btn--active';
     const cssBtnIsVisible: string = 'input__btn--visible';
 
-    function inputIsEmpty(): boolean {
+    function inputIsNotEmpty(): boolean {
         return passwordInput.value.length === 0;
     }
 
@@ -38,11 +38,11 @@ export default function togglePasswordVisibility() {
     });
 
     passwordInput.addEventListener('input', (): void => {
-        inputIsEmpty() ? hideBtn() : showBtn();
+        inputIsNotEmpty() ? hideBtn() : showBtn();
     });
 
     passwordInput.addEventListener('focus', (): void => {
-        if (!inputIsEmpty()) showBtn();
+        if (!inputIsNotEmpty()) showBtn();
     });
 
     window.addEventListener('click', (event) => {
