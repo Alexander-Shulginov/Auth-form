@@ -1,11 +1,10 @@
-import { signInData, signInForm, signUpForm } from './types';
-import { dataIsValid } from './validation/dataIsValid';
+import { signInData, signInForm } from './types';
 
-import nameValid from './validation/name';
-import passwordValidation from './validation/password';
 import mailIsValid from './validation/mailValidation';
+import passwordIsValid from './validation/passwordValidation';
+import nameValidation from './validation/nameValidation';
 
-export default function getData(): void {
+export default function formData(): void {
     const formSignIn = document.getElementById(signInForm.form) as HTMLFormElement;
 
     if (!formSignIn) throw new Error(`#${signInForm.form} not found`);
@@ -22,10 +21,9 @@ export default function getData(): void {
         formData = getFormData(event.target as HTMLFormElement);
 
         mailIsValid();
+        passwordIsValid();
 
-        dataIsValid();
-        passwordValidation(signInForm.password);
-        nameValid(signUpForm.name);
+        nameValidation();
     };
 
     formSignIn.addEventListener('submit', submitHandler);

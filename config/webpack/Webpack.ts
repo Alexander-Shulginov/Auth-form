@@ -21,6 +21,8 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
       clean: isDev ? false : true,
     },
 
+
+
     plugins: buildPlugins(options),
 
     module: {

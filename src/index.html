@@ -32,16 +32,16 @@
                             <input class="input__field" type="email" name="mail" id="sign-in-mail" autocomplete="off" />
                             <div class="input__tip">Mail</div>
                             <div class="input__error">
-                                <div class="error" id="sign-in-mail-error">
-                                    <img class="error__icon" src="./assets/icons/sign.svg" alt="Alert" />
-                                    <!-- <p class="error__text">Input is empty</p> -->
-                                </div>
+                                <div class="error" id="sign-in-mail-error"></div>
                             </div>
                         </div>
 
                         <div class="input" animation-in>
                             <input class="input__field" data-input-password type="password" name="password" id="sign-in-password" autocomplete="off" />
                             <div class="input__tip">Password</div>
+                            <div class="input__error">
+                                <div class="error" id="sign-in-password-error"></div>
+                            </div>
 
                             <!-- <div class="input__btn">
                                 <img class="input__mask input__mask--white" src="./assets/icons/mask-white.svg" alt="Mask" />
@@ -104,7 +104,7 @@
                 <form class="form__tab-up" id="sign-up-form">
                     <div class="form__inputs">
                         <div class="input" animation-up>
-                            <input class="input__field" type="email" name="user" id="sign-up-name" autocomplete="off" />
+                            <input class="input__field" type="text" name="user" id="sign-up-name" autocomplete="off" />
                             <div class="input__tip">Name</div>
                         </div>
                         <div class="input" animation-up>

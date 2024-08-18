@@ -5,11 +5,13 @@ export interface signInData {
 export const enum signInForm {
     form = 'sign-in-form',
 
-    mail = 'sign-in-mail',
+    mailInput = 'sign-in-mail',
     mailError = 'sign-in-mail-error',
+    mailErrorText = 'Invalid email',
 
     password = 'sign-in-password',
     passwordError = 'sign-in-password-error',
+    passwordErrorText = 'Min length 4',
 }
 
 export const enum signUpForm {
