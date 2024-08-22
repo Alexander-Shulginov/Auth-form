@@ -1,4 +1,4 @@
-import { signInData, signInForm } from '../../frontend/types';
+import { signInData, signInForm } from '../frontend/types';
 
 export default function errorHadler(data: signInData) {
     const mailError = document.getElementById(signInForm.mailError) as HTMLElement;
