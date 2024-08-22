@@ -1,14 +1,14 @@
 import getFormData from './getFormData';
 import errorHadler from './errorHandler';
-import { mailValidation, passwordValidation } from './formValidation';
+import { mailValidation, nameValidation, passwordValidation } from './formValidation';
 
 export default function submitHandler(event: SubmitEvent): void {
     event.preventDefault();
     const data = getFormData(event);
 
-    errorHadler(data);
-    console.log(mailValidation(data.mail));
-    console.log(passwordValidation(data.password));
+    data.name in data ?? nameValidation(data.name);
+    data.mail in data ?? mailValidation(data.mail);
+    data.password in data ?? passwordValidation(data.password);
 }
 
 // if (!formSignIn) throw new Error(`#${signInForm.form} not found`);
