@@ -1,6 +1,4 @@
-export interface signInData {
-    [key: string]: string;
-}
+export type SignInData = Record<string, string>;
 
 export const enum signInForm {
     form = 'sign-in-form',
