@@ -1,6 +1,7 @@
-import { SignInData, signInForm } from '../frontend/types';
+import { mailErrorHandler, passwordErrorHandler } from './formValidation';
+import { SignInData } from './types';
 
-export default function errorHadler(event: Event) {
-    const mailError = document.getElementById(signInForm.mailError) as HTMLElement;
-    if (!mailError) throw new Error(`#${signInForm.mailError} not found`);
-}
+export const errorHandler = (data: SignInData, event: Event) => {
+    if (data.hasOwnProperty('mail')) mailErrorHandler(data, event);
+    if (data.hasOwnProperty('password')) passwordErrorHandler(data, event);
+};
