@@ -1,6 +1,6 @@
-import { SignInData } from './types';
+import { InputData } from './types';
 
-export default function getFormData(event: Event) {
-    const formData = new FormData(event.target as HTMLFormElement);
-    return Object.fromEntries(formData.entries()) as SignInData;
-}
+export const getFormData = (event: Event) => {
+    const data = new FormData(event.target as HTMLFormElement);
+    return Object.fromEntries(data.entries()) as InputData;
+};
