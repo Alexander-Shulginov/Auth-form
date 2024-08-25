@@ -21,4 +21,3 @@ export const enum PasswordInput {
     errorText = 'Min length 6',
     passLength = 6,
 }
-

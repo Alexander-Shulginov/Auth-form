@@ -1,11 +1,14 @@
 import { dataIsValid } from './dataValidation/dataIsValid';
 import { errorHandler } from './errorHandlers/errorHandler';
 import { getFormData } from './getFormData';
+import { sendData } from './sendData';
+import { InputData } from './types';
 
 export const submitHandler = (event: SubmitEvent): void => {
     event.preventDefault();
-    const data = getFormData(event);
+    const data: InputData = getFormData(event);
+    const dataIsCorrect: boolean = dataIsValid(data);
     errorHandler(data, event);
-    const dataIsCorrect = dataIsValid(data);
-    console.log(dataIsCorrect);
+
+    if (dataIsCorrect) sendData(data);
 };
