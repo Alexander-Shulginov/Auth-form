@@ -16,17 +16,16 @@
         box-shadow: $shadow-base;
         border: none;
         background-color: transparent;
-        padding: $offset-base;
+        padding: 18px 50px 18px 18px;
         outline: none;
 
         // width: 100%;
-
+        -webkit-appearance: none;
         color: $color-text;
         line-height: $line-height-base;
         font-size: $fz-base;
 
         border-radius: $radius-field;
-        transition: box-shadow 0.4s ease-in-out;
         position: relative;
         transition: 0.3s ease-in-out;
 

@@ -18,6 +18,6 @@ export const sendData = (data: InputData) => {
     fetch(FetchOption.endPoint, params)
         .then((response) => response.json())
         .then((data) => {
-            console.log('Успех:', data);
+            console.log('Success:', data);
         });
 };

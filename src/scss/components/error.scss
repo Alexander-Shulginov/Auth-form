@@ -7,6 +7,9 @@
     cursor: pointer;
     box-shadow: $shadow-second;
     white-space: nowrap;
+    color: $color-text;
+
+    outline: none;
 
     margin: 0;
     padding-left: 42px;
@@ -34,10 +37,8 @@
         height: 20px;
     }
 
-    @media (any-hover: hover) {
-        &:hover {
-            transform: translateX(0);
-        }
+    &:hover {
+        transform: translateX(0);
     }
 
     &--active {

@@ -10,8 +10,8 @@
     box-shadow: $shadow-base;
 }
 
-[animation-in],
-[animation-up] {
+[data-anim-in],
+[data-anim-up] {
     animation: visAnim 0.5s ease-in-out;
 }
 

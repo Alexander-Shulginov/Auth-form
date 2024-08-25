@@ -6,6 +6,10 @@
     width: 100%;
     overflow: hidden;
 
+    @media (max-width: 768px){
+        padding: 24px 16px;
+    }
+
     &__control {
         margin-bottom: 60px;
         display: flex;
@@ -19,6 +23,10 @@
         border-radius: $radius-field;
         box-shadow: $shadow-base;
         padding: 6px;
+
+        @media (max-width: 768px){
+            margin-bottom: 34px;
+        }
     }
 
     &__nav {
@@ -111,6 +119,10 @@
         gap: 24px;
 
         margin-bottom: 24px;
+
+        @media (max-width: 768px){
+            gap: 16px;
+        }
     }
 
     &__checkbox {

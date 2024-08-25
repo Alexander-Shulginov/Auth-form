@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Neomorphism form">
         <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon/favicon-16x16.png" />
@@ -28,72 +29,74 @@
 
                 <form class="form__tab-in form__tab--active" id="sign-in-form" novalidate>
                     <div class="form__inputs">
-                        <div class="input" animation-in>
+                        <div class="input" data-anim-in>
                             <input class="input__field" type="email" name="mail" id="sign-in-mail" autocomplete="off" />
-                            <div class="input__tip">Mail</div>
+                            <label class="input__tip" for="sign-in-mail">Mail</label>
                             <div class="input__error">
-                                <div class="error" data-error-mail></div>
+                                <div class="error" tabindex="0" data-error-mail></div>
                             </div>
                         </div>
 
-                        <div class="input" animation-in>
+                        <div class="input" data-anim-in>
                             <input class="input__field" data-input-password type="password" name="password" id="sign-in-password" autocomplete="off" />
-                            <div class="input__tip">Password</div>
+                            <label class="input__tip" for="sign-in-password">Password</label>
                             <div class="input__error">
-                                <div class="error" data-error-password></div>
+                                <div class="error" tabindex="0" data-error-password></div>
                             </div>
 
-                            <!-- <div class="input__btn">
+                            <div class="input__btn">
                                 <img class="input__mask input__mask--white" src="./assets/icons/mask-white.svg" alt="Mask" />
                                 <img class="input__mask input__mask--black" src="./assets/icons/mask-black.svg" alt="Mask" />
-                            </div> -->
+                            </div>
                         </div>
                     </div>
 
-                    <div class="form__or" animation-in>Or</div>
+                    <div class="form__or" data-anim-in>Or</div>
 
                     <div class="form__services">
                         <div class="service">
                             <button class="service__btn" type="button">
-                                <div class="service__wrap" animation-in>
+                                <span class="service__wrap" data-anim-in>
                                     <img class="service__icon" src="./assets/icons/google.svg" alt="Google logo" />
-                                </div>
+                                </span>
                             </button>
                             <div class="service__shadow"></div>
                         </div>
                         <div class="service">
                             <button class="service__btn" type="button">
-                                <div class="service__wrap" animation-in>
+                                <span class="service__wrap" data-anim-in>
                                     <img class="service__icon" src="./assets/icons/apple.svg" alt="Google logo" />
-                                </div>
+                                </span>
                             </button>
                             <div class="service__shadow"></div>
                         </div>
                         <div class="service">
                             <button class="service__btn" type="button">
-                                <div class="service__wrap" animation-in>
+                                <span class="service__wrap" data-anim-in>
                                     <img class="service__icon" src="./assets/icons/github.svg" alt="Google logo" />
-                                </div>
+                                </span>
                             </button>
                             <div class="service__shadow"></div>
                         </div>
                     </div>
 
                     <div class="form__checkbox">
-                        <div class="checkbox" animation-in>
+                        <div class="checkbox" data-anim-in>
                             <div class="checkbox__wrap">
-                                <input class="checkbox__field" type="checkbox" name="user-remember" id="user-in-remember" />
-                                <div class="checkbox__icon">
-                                    <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
-                                    </svg>
+                                <div class="checkbox__elem">
+                                    <input class="checkbox__field" type="checkbox" name="user-remember" id="user-in-remember" />
+                                    <div class="checkbox__icon">
+                                        <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <label class="checkbox__text" for="user-in-remember">Remember me</label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="submit" animation-in>
+                    <div class="submit" data-anim-in>
                         <button class="submit__btn" type="submit">
                             <span class="submit__text">Sign in</span>
                         </button>
@@ -103,50 +106,52 @@
 
                 <form class="form__tab-up" id="sign-up-form" novalidate>
                     <div class="form__inputs">
-                        <div class="input" animation-up>
+                        <div class="input" data-anim-up>
                             <input class="input__field" type="text" name="name" id="sign-up-name" autocomplete="off" pattern="/^[a-zA-Z0-9]*$/" />
-                            <div class="input__tip">Name</div>
+                            <label class="input__tip" for="sign-up-name">Name</label>
                             <div class="input__error">
-                                <div class="error" data-error-name></div>
+                                <div class="error" tabindex="0" data-error-name></div>
                             </div>
                         </div>
-                        <div class="input" animation-up>
+                        <div class="input" data-anim-up>
                             <input class="input__field" type="email" name="mail" id="sign-up-mail" autocomplete="off" />
-                            <div class="input__tip">Mail</div>
+                            <label class="input__tip" for="sign-up-mail">Mail</label>
                             <div class="input__error">
-                                <div class="error" data-error-mail></div>
+                                <div class="error" tabindex="0" data-error-mail></div>
                             </div>
                         </div>
 
-                        <div class="input" animation-up>
+                        <div class="input" data-anim-up>
                             <input class="input__field" data-input-password type="password" name="password" id="sign-up-password" autocomplete="off" />
-                            <div class="input__tip">Password</div>
+                            <label class="input__tip" aria-label="sign-up-password">Password</label>
                             <div class="input__error">
-                                <div class="error" data-error-password></div>
+                                <div class="error" tabindex="0" data-error-password></div>
                             </div>
 
-                            <!-- <div class="input__btn">
+                            <div class="input__btn">
                                 <img class="input__mask input__mask--white" src="./assets/icons/mask-white.svg" alt="Mask" />
                                 <img class="input__mask input__mask--black" src="./assets/icons/mask-black.svg" alt="Mask" />
-                            </div> -->
+                            </div>
                         </div>
                     </div>
 
                     <div class="form__checkbox">
-                        <div class="checkbox" animation-up>
+                        <div class="checkbox" data-anim-up>
                             <div class="checkbox__wrap">
-                                <input class="checkbox__field" type="checkbox" name="user-remember" id="user-up-remember" />
-                                <div class="checkbox__icon">
-                                    <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
-                                    </svg>
+                                <div class="checkbox__elem">
+                                    <input class="checkbox__field" type="checkbox" name="user-remember" id="user-up-remember" />
+                                    <div class="checkbox__icon">
+                                        <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <label class="checkbox__text" for="user-up-remember">Remember me</label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="submit" animation-up>
+                    <div class="submit" data-anim-up>
                         <button class="submit__btn" type="submit">
                             <span class="submit__text">Sign up</span>
                         </button>
