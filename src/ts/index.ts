@@ -2,13 +2,11 @@ import '../scss/style.scss';
 
 import initTabs from './ui/initTabs';
 import togglePlaceholder from './ui/TogglePlaceholder';
-import togglePasswordVisibility from './ui/TogglePasswordVisibility';
 import { submitHandler } from './frontend/submitHandler';
 import { FormElem } from './frontend/types';
 
 initTabs();
 togglePlaceholder();
-// togglePasswordVisibility();
 
 const formSignIn = document.getElementById(FormElem.signIn) as HTMLFormElement;
 const formSignUp = document.getElementById(FormElem.signUp) as HTMLFormElement;

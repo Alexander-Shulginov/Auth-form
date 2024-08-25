@@ -15,6 +15,38 @@
     animation: visAnim 0.5s ease-in-out;
 }
 
+.form--success [data-anim-in],
+.form--success [data-anim-up] {
+    animation: successAnimation 0.5s ease-in-out forwards;
+}
+
+.form--success .form__welcome {
+    // animation: welcomeAnimation 0.5s ease-in-out forwards;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+@keyframes welcomeAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes successAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes waves {
     0% {
         transform: scale(1);
@@ -25,20 +57,6 @@
     }
     100% {
         transform: scale(1.15);
-        opacity: 0;
-    }
-}
-
-@keyframes wavesIcon {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1.6);
         opacity: 0;
     }
 }

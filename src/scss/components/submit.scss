@@ -4,11 +4,11 @@
     border-radius: $radius-large;
     transition: 0.4s ease-in-out;
 
-    // @media (any-hover: hover) {
-    //     &:hover .wave--animation {
-    //         animation: waves 0.8s linear forwards;
-    //     }
-    // }
+    @media (any-hover: hover) {
+        &:hover .wave--animation {
+            animation: waves 0.8s linear forwards;
+        }
+    }
 
     &:active {
         box-shadow: inset 3px 3px 7px #bebebe, inset -3px -3px 8px #ffffff;
@@ -38,14 +38,6 @@
         &:focus-visible {
             .submit__text::after {
                 width: 100%;
-            }
-        }
-
-        @media (any-hover: hover) {
-            &:hover {
-                .submit__text::after {
-                    width: 100%;
-                }
             }
         }
     }
