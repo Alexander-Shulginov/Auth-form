@@ -20,20 +20,32 @@
     animation: successAnimation 0.5s ease-in-out forwards;
 }
 
-.form--success .form__welcome {
-    // animation: welcomeAnimation 0.5s ease-in-out forwards;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    transition-delay: 0.5s;
+.test {
+    width: 0px;
+    overflow: hidden;
+    opacity: 0;
 }
 
-@keyframes welcomeAnimation {
-    0% {
-        opacity: 0;
+.form--success .form__welcome {
+    svg {
+        width: 250px;
+        height: 55px;
     }
 
-    100% {
-        opacity: 1;
+    svg path {
+        fill: rgb(87, 95, 107);
+        transition-property: fill;
+        transition-duration: 0.7s;
+        transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+
+    $initial-delay: 0.6s;
+    $delay-increment: 0.1s;
+
+    @for $i from 1 through 7 {
+        .form__welcome--#{$i} {
+            transition-delay: $initial-delay + ($i - 1) * $delay-increment;
+        }
     }
 }
 

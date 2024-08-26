@@ -1,13 +1,15 @@
 import '../scss/style.scss';
 
 import initTabs from './ui/initTabs';
-import togglePlaceholder from './ui/TogglePlaceholder';
 import { submitHandler } from './frontend/submitHandler';
 import { FormElem } from './frontend/types';
+import { toggleTips } from './ui/toggleTips';
+import { InputTips } from './ui/InputTips';
 
 initTabs();
-togglePlaceholder();
+toggleTips();
 
+export const tips = new InputTips();
 const formSignIn = document.getElementById(FormElem.signIn) as HTMLFormElement;
 const formSignUp = document.getElementById(FormElem.signUp) as HTMLFormElement;
 
