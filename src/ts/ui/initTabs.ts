@@ -1,9 +1,9 @@
 export default function initTabs(): void {
-    const signIn = document.querySelector('.form__sign-in') as HTMLElement | null;
-    const signUp = document.querySelector('.form__sign-up') as HTMLElement | null;
-    const frame = document.querySelector('.form__frame') as HTMLElement | null;
-    const tabIn = document.querySelector('.form__tab-in') as HTMLElement | null;
-    const tabUp = document.querySelector('.form__tab-up') as HTMLElement | null;
+    const signIn = document.querySelector('.form__sign-in');
+    const signUp = document.querySelector('.form__sign-up');
+    const frame = document.querySelector('.form__frame');
+    const tabIn = document.querySelector('.form__tab-in');
+    const tabUp = document.querySelector('.form__tab-up');
 
     const cssNavActive: string = 'form__nav--active';
     const cssTabActive: string = 'form__tab--active';

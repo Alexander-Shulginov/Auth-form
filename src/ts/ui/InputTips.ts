@@ -5,13 +5,13 @@ export class InputTips {
         this.cssTipsHidden = 'input__tip--hidden';
     }
 
-    public inputIsEmpty(input: HTMLInputElement): boolean {
-        return input.value.length >= 1;
-    }
-
     private getActiveElem(input: HTMLInputElement) {
         const elemAttribut = input.getAttribute('id');
         return document.querySelector(`[for="${elemAttribut}"]`);
+    }
+
+    public inputIsEmpty(input: HTMLInputElement): boolean {
+        return input.value.length >= 1;
     }
 
     public showTip(input: HTMLInputElement) {
@@ -22,7 +22,7 @@ export class InputTips {
         this.getActiveElem(input).classList.remove(this.cssTipsHidden);
     }
 
-    public hideAllTip(input: HTMLInputElement) {
+    public showAllTip(input: HTMLInputElement) {
         input.classList.remove(this.cssTipsHidden);
     }
 }

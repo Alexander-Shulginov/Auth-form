@@ -8,6 +8,14 @@
         justify-content: center;
         gap: 8px;
         cursor: pointer;
+        outline: none;
+
+        &:focus-visible {
+            .checkbox__text::after {
+                width: 100%;
+            }
+        }
+
         @media (any-hover: hover) {
             &:hover {
                 .checkbox__text::after {
@@ -29,12 +37,6 @@
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: none;
-
-        &:focus-visible {
-            ~ .checkbox__text::after {
-                width: 100%;
-            }
-        }
     }
 
     &__field:checked {

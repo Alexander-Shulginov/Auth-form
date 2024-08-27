@@ -2,23 +2,17 @@ import { tips } from '..';
 
 export const toggleSuccessMsg = () => {
     const formElem: HTMLElement = document.querySelector('.form');
-    const inputElems = document.querySelectorAll('.input__tip');
+    const tipElems: NodeListOf<HTMLInputElement> = document.querySelectorAll('.input__tip');
     const cssSuccessActive: string = 'form--success';
-    if (formElem) {
-        formElem.classList.add(cssSuccessActive);
 
-        setTimeout(() => {
-            formElem.classList.remove(cssSuccessActive);
-        }, 4000);
+    if (!formElem) return;
 
-        inputElems.forEach((el: HTMLInputElement) => {
-            tips.hideAllTip(el);
+    formElem.classList.add(cssSuccessActive);
+
+    setTimeout(() => {
+        formElem.classList.remove(cssSuccessActive);
+        tipElems.forEach((i) => {
+            tips.showAllTip(i);
         });
-
-        setTimeout(() => {
-            inputElems.forEach((el: HTMLInputElement) => {
-                tips.showTip(el);
-            });
-        }, 4000);
-    }
+    }, 4000);
 };

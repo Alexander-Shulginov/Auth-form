@@ -33,7 +33,7 @@
                             <input class="input__field" type="email" name="mail" id="sign-in-mail" autocomplete="off" />
                             <label class="input__tip" for="sign-in-mail">Mail</label>
                             <div class="input__error">
-                                <div class="error" tabindex="0" data-error-mail></div>
+                                <div class="error" tabindex="-1" data-error-mail></div>
                             </div>
                         </div>
 
@@ -41,7 +41,7 @@
                             <input class="input__field" data-input-password type="password" name="password" id="sign-in-password" autocomplete="off" />
                             <label class="input__tip" for="sign-in-password">Password</label>
                             <div class="input__error">
-                                <div class="error" tabindex="0" data-error-password></div>
+                                <div class="error" tabindex="-1" data-error-password></div>
                             </div>
                         </div>
                     </div>
@@ -77,9 +77,9 @@
 
                     <div class="form__checkbox">
                         <div class="checkbox" data-anim-in>
-                            <div class="checkbox__wrap">
+                            <div class="checkbox__wrap" tabindex="0">
                                 <div class="checkbox__elem">
-                                    <input class="checkbox__field" type="checkbox" name="user-remember" id="user-in-remember" />
+                                    <input class="checkbox__field" type="checkbox" name="user-remember" id="user-in-remember" tabindex="-1" />
                                     <div class="checkbox__icon">
                                         <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
@@ -105,31 +105,31 @@
                             <input class="input__field" type="text" name="name" id="sign-up-name" autocomplete="off" pattern="/^[a-zA-Z0-9]*$/" />
                             <label class="input__tip" for="sign-up-name">Name</label>
                             <div class="input__error">
-                                <div class="error" tabindex="0" data-error-name></div>
+                                <div class="error" tabindex="-1" data-error-name></div>
                             </div>
                         </div>
                         <div class="input" data-anim-up>
                             <input class="input__field" type="email" name="mail" id="sign-up-mail" autocomplete="off" />
                             <label class="input__tip" for="sign-up-mail">Mail</label>
                             <div class="input__error">
-                                <div class="error" tabindex="0" data-error-mail></div>
+                                <div class="error" tabindex="-1" data-error-mail></div>
                             </div>
                         </div>
 
                         <div class="input" data-anim-up>
                             <input class="input__field" data-input-password type="password" name="password" id="sign-up-password" autocomplete="off" />
-                            <label class="input__tip" aria-label="sign-up-password">Password</label>
+                            <label class="input__tip" for="sign-up-password">Password</label>
                             <div class="input__error">
-                                <div class="error" tabindex="0" data-error-password></div>
+                                <div class="error" tabindex="-1" data-error-password></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="form__checkbox">
                         <div class="checkbox" data-anim-up>
-                            <div class="checkbox__wrap">
+                            <div class="checkbox__wrap" tabindex="0">
                                 <div class="checkbox__elem">
-                                    <input class="checkbox__field" type="checkbox" name="user-remember" id="user-up-remember" />
+                                    <input class="checkbox__field" type="checkbox" name="user-remember" id="user-up-remember" tabindex="-1" />
                                     <div class="checkbox__icon">
                                         <svg width="20" height="14" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9.08676 14.5431L10.5008 15.9571L11.915 14.5433L23.6291 2.83276L25.1732 4.37826L10.501 19.0505L2.8294 11.3789L4.37598 9.83233L9.08676 14.5431Z" stroke="#575f6b" stroke-width="4" class="checkbox__mark"></path>
